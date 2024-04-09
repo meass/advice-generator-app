@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply h-screen flex items-center bg-dark-blue font-manrope justify-center;
+}
+main {
+  @apply relative max-w-96 w-full bg-dark-grayish-blue mx-4 text-center p-8 rounded-xl;
+}
+main p {
+  @apply text-neon-green uppercase tracking-widest text-xs pb-6 font-bold;
+}
+main q {
+  @apply text-2xl font-bold text-white;
+}
+.divider {
+  @apply flex w-full pt-6;
+}
+.dice {
+  @apply absolute -bottom-7 left-1/2 -translate-x-1/2 z-50 bg-neon-green p-4 rounded-full overflow-visible;
+}
+.dice:hover {
+  box-shadow: 0 0 1rem hsl(150, 100%, 66%);
+}
