@@ -9,10 +9,13 @@ main {
   @apply relative max-w-96 w-full bg-dark-grayish-blue mx-4 text-center p-8 rounded-xl;
 }
 main p {
-  @apply text-neon-green uppercase tracking-widest text-xs pb-6 font-bold;
+  @apply text-neon-green uppercase tracking-widest text-xs font-bold;
 }
 main q {
   @apply text-2xl font-bold text-white;
+}
+.advice-container {
+  @apply opacity-100 transition-opacity duration-300 pb-4;
 }
 .divider {
   @apply flex w-full pt-6;
@@ -23,3 +26,12 @@ main q {
 .dice:hover {
   box-shadow: 0 0 1rem hsl(150, 100%, 66%);
 }
+.loading-icon {
+  @apply w-8 h-8 mt-4 text-gray-200 animate-spin dark:text-gray-600 fill-neon-green mx-auto opacity-100 transition-opacity duration-300;
+}
+.hidden {
+  @apply opacity-0;
+}
+/* q.hidden {
+  @apply opacity-100;
+} */

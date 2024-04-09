@@ -6,8 +6,16 @@ const adviceContent = document.querySelector(
 const randomAdvice = document.querySelector(
   '#random-advice'
 ) as HTMLButtonElement;
+const loadingIcon = document.querySelector(
+  '.loading-icon'
+) as HTMLOrSVGImageElement;
+const adviceContainer = document.querySelector(
+  '.advice-container'
+) as HTMLDivElement;
 
 const getAdviceData = (): void => {
+  loadingIcon.classList.remove('hidden');
+  adviceContainer.classList.add('hidden');
   fetch(apiUrl)
     .then((res) => {
       if (res.ok) {
@@ -20,6 +28,8 @@ const getAdviceData = (): void => {
       const { id, advice } = slip;
       adviceId.innerHTML = `Advice #${id}`;
       adviceContent.innerHTML = advice;
+      adviceContainer.classList.remove('hidden');
+      loadingIcon.classList.add('hidden');
     });
 };
 

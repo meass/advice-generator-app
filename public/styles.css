@@ -578,7 +578,6 @@ main {
 }
 
 main p {
-  padding-bottom: 1.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 700;
@@ -594,6 +593,14 @@ main q {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.advice-container {
+  padding-bottom: 1rem;
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 .divider {
@@ -619,3 +626,43 @@ main q {
 .dice:hover {
   box-shadow: 0 0 1rem hsl(150, 100%, 66%);
 }
+
+.loading-icon {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+  fill: hsl(150, 100%, 66%);
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  .loading-icon {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* q.hidden {
+  @apply opacity-100;
+} */
